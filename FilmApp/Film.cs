@@ -1,6 +1,6 @@
 ﻿namespace FilmApp
 {
-    internal class Film
+    public class Film
     {
         public string Cim;
         public int HosszPercben;
