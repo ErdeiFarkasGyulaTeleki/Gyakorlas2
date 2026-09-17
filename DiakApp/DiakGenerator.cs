@@ -6,59 +6,68 @@ namespace DiakApp
     {
         public class DiakGeneratorKonfig
         {
-            public double MAGYAR_HAROMNEVUEK_ARANYA = 0.15;
-            public List<string> VezetekNevek = new List<string>() { "Kovács", "Nagy", "Tóth", "Szabó", "Horváth", "Varga", "Kiss", "Molnár", "Balogh", "Farkas" };
-            public List<string> KeresztNevek = new List<string>() { "Bence", "Levente", "Máté", "Dávid", "Gergő", "Zsombor", "Ádám", "Bálint", "Márk", "Tamás" };
+            public double MAGYAR_HAROMNEVUEK_ARANYA;
+            public List<string> VezetekNevek;
+            public List<string> KeresztNevek;
+
+            public DiakGeneratorKonfig(double _arany, List<string> _vezetek, List<string> _kereszt)
+            {
+                MAGYAR_HAROMNEVUEK_ARANYA = _arany;
+                VezetekNevek = _vezetek;
+                KeresztNevek = _kereszt;
+            }
 
             public class Epito
             {
-                private DiakGeneratorKonfig konfig = new DiakGeneratorKonfig();
+                public double MAGYAR_HAROMNEVUEK_ARANYA = 0.15;
+                public List<string> VezetekNevek = new List<string>() { "Kovács", "Nagy", "Tóth", "Szabó", "Horváth", "Varga", "Kiss", "Molnár", "Balogh", "Farkas" };
+                public List<string> KeresztNevek = new List<string>() { "Bence", "Levente", "Máté", "Dávid", "Gergő", "Zsombor", "Ádám", "Bálint", "Márk", "Tamás" };
 
                 public Epito SetMagyarHaromnevuekAranya(double aranya)
                 {
-                    konfig.MAGYAR_HAROMNEVUEK_ARANYA = aranya;
+                    MAGYAR_HAROMNEVUEK_ARANYA = aranya;
                     return this;
                 }
 
                 public Epito SetVezetekNevek(List<string> vezetekNevek)
                 {
-                    konfig.VezetekNevek = vezetekNevek;
+                    VezetekNevek = vezetekNevek;
                     return this;
                 }
 
                 public Epito AddVezetekNev(string vezetekNev)
                 {
-                    konfig.VezetekNevek.Add(vezetekNev);
+                    VezetekNevek.Add(vezetekNev);
                     return this;
                 }
 
                 public Epito AddVezetekNevek(List<string> vezetekNevek)
                 {
-                    konfig.VezetekNevek.AddRange(vezetekNevek);
+                    VezetekNevek.AddRange(vezetekNevek);
                     return this;
                 }
 
                 public Epito SetKeresztNevek(List<string> keresztNevek)
                 {
-                    konfig.KeresztNevek = keresztNevek;
+                    KeresztNevek = keresztNevek;
                     return this;
                 }
 
                 public Epito AddKeresztNev(string keresztNev)
                 {
-                    konfig.KeresztNevek.Add(keresztNev);
+                    KeresztNevek.Add(keresztNev);
                     return this;
                 }
 
                 public Epito AddKeresztNevek(List<string> keresztnevek)
                 {
-                    konfig.KeresztNevek.AddRange(keresztnevek);
+                    KeresztNevek.AddRange(keresztnevek);
                     return this;
                 }
 
                 public DiakGeneratorKonfig KonfigEpites()
                 {
-                    return konfig;
+                    return new DiakGeneratorKonfig(MAGYAR_HAROMNEVUEK_ARANYA, VezetekNevek, KeresztNevek);
                 }
             }
         }
