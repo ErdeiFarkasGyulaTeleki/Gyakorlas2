@@ -6,26 +6,26 @@ namespace DiakApp
     {
         public class DiakGeneratorKonfig
         {
-            public double MAGYAR_HAROMNEVUEK_ARANYA;
+            public double haromnevuek_eselye;
             public List<string> VezetekNevek;
             public List<string> KeresztNevek;
 
             public DiakGeneratorKonfig(double _arany, List<string> _vezetek, List<string> _kereszt)
             {
-                MAGYAR_HAROMNEVUEK_ARANYA = _arany;
+                haromnevuek_eselye = _arany;
                 VezetekNevek = _vezetek;
                 KeresztNevek = _kereszt;
             }
 
             public class Epito
             {
-                public double MAGYAR_HAROMNEVUEK_ARANYA = 0.15;
+                public double haromnevuek_eselye = 0.15;
                 public List<string> VezetekNevek = new List<string>() { "Kovács", "Nagy", "Tóth", "Szabó", "Horváth", "Varga", "Kiss", "Molnár", "Balogh", "Farkas" };
                 public List<string> KeresztNevek = new List<string>() { "Bence", "Levente", "Máté", "Dávid", "Gergő", "Zsombor", "Ádám", "Bálint", "Márk", "Tamás" };
 
                 public Epito SetMagyarHaromnevuekAranya(double aranya)
                 {
-                    MAGYAR_HAROMNEVUEK_ARANYA = aranya;
+                    haromnevuek_eselye = aranya;
                     return this;
                 }
 
@@ -67,7 +67,7 @@ namespace DiakApp
 
                 public DiakGeneratorKonfig KonfigEpites()
                 {
-                    return new DiakGeneratorKonfig(MAGYAR_HAROMNEVUEK_ARANYA, VezetekNevek, KeresztNevek);
+                    return new DiakGeneratorKonfig(haromnevuek_eselye, VezetekNevek, KeresztNevek);
                 }
             }
         }
