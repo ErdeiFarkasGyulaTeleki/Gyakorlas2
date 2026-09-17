@@ -20,8 +20,8 @@ namespace DiakApp
             public class Epito
             {
                 public double haromnevuek_eselye = 0.15;
-                public List<string> VezetekNevek = new List<string>() { "Kovács", "Nagy", "Tóth", "Szabó", "Horváth", "Varga", "Kiss", "Molnár", "Balogh", "Farkas" };
-                public List<string> KeresztNevek = new List<string>() { "Bence", "Levente", "Máté", "Dávid", "Gergő", "Zsombor", "Ádám", "Bálint", "Márk", "Tamás" };
+                public List<string> VezetekNevek = new List<string>();
+                public List<string> KeresztNevek = new List<string>();
 
                 public Epito SetMagyarHaromnevuekAranya(double aranya)
                 {
@@ -72,13 +72,18 @@ namespace DiakApp
             }
         }
 
-        public static readonly DiakGeneratorKonfig.Epito epito = new DiakGeneratorKonfig.Epito()
+        public static List<string> alapVezetekNevek = new List<string>() { "Kovács", "Nagy", "Tóth", "Szabó", "Horváth", "Varga", "Kiss", "Molnár", "Balogh", "Farkas" };
+        public static List<string> alapKeresztnevek = new List<string>() { "Bence", "Levente", "Máté", "Dávid", "Gergő", "Zsombor", "Ádám", "Bálint", "Márk", "Tamás" };
+
+        public static DiakGeneratorKonfig.Epito alapEpito = new DiakGeneratorKonfig.Epito()
+            .AddVezetekNevek(alapVezetekNevek)
+            .AddKeresztNevek(alapKeresztnevek)
             .AddVezetekNev("Erdei")
             .AddKeresztNev("Farkas")
             .AddKeresztNev("Gyula");
 
 
-        public static readonly DiakGeneratorKonfig alapKonfig = epito.KonfigEpites();
+        public static DiakGeneratorKonfig alapKonfig = alapEpito.KonfigEpites();
 
 
         public static Diak UjDiak()
