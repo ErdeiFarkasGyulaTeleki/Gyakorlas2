@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TelefonApp
+﻿namespace TelefonApp
 {
-    internal class Okostelefon
+    public class Okostelefon
     {
+        public string Modell { get; set; }
+        public int Toltottseg
+        {
+            get;
+            set
+            {
+                field = Math.Clamp(value, 0, 100);
+            }
+        }
     }
 }
