@@ -17,7 +17,7 @@ namespace FilmApp
 
         public override string ToString()
         {
-            return $"A {Cim} című film {HosszPercben} perces)";
+            return $"A {Cim} című film {HosszPercben} perces.";
         }
     }
 }
