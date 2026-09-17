@@ -1,1 +1,3 @@
-<Solution />
+<Solution>
+  <Project Path="FilmApp/FilmApp.csproj" />
+</Solution>
