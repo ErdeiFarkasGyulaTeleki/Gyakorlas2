@@ -98,8 +98,8 @@ namespace DiakApp
 
         private static string NevGeneralas(Random random)
         {
-            public List<string> VezetekNevek = alapKonfig.VezetekNevek;
-            public List<string> KeresztNevek = alapKonfig.KeresztNevek;
+            List<string> VezetekNevek = alapKonfig.VezetekNevek;
+            List<string> KeresztNevek = alapKonfig.KeresztNevek;
 
 
             string vezetekNev = VezetekNevek[random.Next(0, VezetekNevek.Count)];
