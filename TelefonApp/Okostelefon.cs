@@ -11,5 +11,16 @@
                 field = Math.Clamp(value, 0, 100);
             }
         }
+
+        public Okostelefon(string _modell, int _toltottseg)
+        {
+            Modell = _modell;
+            Toltottseg = _toltottseg;
+        }
+
+        public override string ToString()
+        {
+            return $"A {Modell} telefon töltöttsége {Toltottseg}%";
+        }
     }
 }
