@@ -105,7 +105,7 @@ namespace DiakApp
             string vezetekNev = VezetekNevek[random.Next(0, VezetekNevek.Count)];
             string keresztNev = KeresztNevek[random.Next(0, KeresztNevek.Count)];
 
-            if (random.NextDouble() < MAGYAR_HAROMNEVUEK_ARANYA)
+            if (random.NextDouble() < alapKonfig.haromnevuek_eselye)
             {
                 while (true)
                 {
