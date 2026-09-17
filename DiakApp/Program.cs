@@ -7,7 +7,7 @@ Dictionary<Tantargy, double> atlagok1 = new Dictionary<Tantargy, double>
     { Tantargy.Angol, 2.1 }
 };
 
-Diak diak1 = new Diak("Kiss Péter", atlagok1);
+Diak diak1 = new Diak("Tüdő R. Ákos", atlagok1);
 
 Console.WriteLine(diak1);
 
