@@ -12,3 +12,10 @@ Diak diak1 = new Diak("Tüdő R. Ákos", atlagok1);
 Console.WriteLine(diak1);
 
 diak1.TantargyAtlagokKiirasa();
+
+Osztaly osztaly = Osztaly.RandomOsztalyGeneralas(12);
+
+foreach (var diak in osztaly.Diakok)
+{
+    diak.TantargyAtlagokKiirasa();
+}
