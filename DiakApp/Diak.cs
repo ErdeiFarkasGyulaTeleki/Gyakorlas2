@@ -20,7 +20,7 @@
         public void TantargyAtlagokKiirasa()
         {
             Console.WriteLine($"{Nev} nevű diák tantárgyankénti átlaga:");
-            atlagok.Select(t => $"\t{t.Key}: {t.Value}").ToList().ForEach(Console.WriteLine);
+            atlagok.Select(t => $"\t{t.Key}: {Math.Round(t.Value, 2)}").ToList().ForEach(Console.WriteLine);
         }
     }
 }
